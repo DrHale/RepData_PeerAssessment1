@@ -51,7 +51,7 @@ stepsday <- with(act2,tapply(steps, date, sum))
 hist(stepsday,xlab = "Steps per day",main = "",breaks = 10)
 ```
 
-![](PA1_template_files/figure-html/steps per day-1.png)<!-- -->
+![](PA1_template_files/figure-html/steps-per-day-1.png)<!-- -->
 
 ##### Mean and median number of steps taken each day
 
@@ -68,7 +68,7 @@ meaninterval <- with(act2,tapply(steps, interval, mean))
 plot(names(meaninterval),meaninterval,type = "l")
 ```
 
-![](PA1_template_files/figure-html/time series of steps-1.png)<!-- -->
+![](PA1_template_files/figure-html/time-series-of-steps-1.png)<!-- -->
 
 ```r
 maxpeak = meaninterval[which.max(meaninterval)]
@@ -139,7 +139,7 @@ plot(act2$datetime,act2$steps,type = "l",col="red",xlab = "Time",ylab = "Steps t
 points(activity2$datetime,activity2$impute,col = "black",type = "l",)
 ```
 
-![](PA1_template_files/figure-html/time series plot-1.png)<!-- -->
+![](PA1_template_files/figure-html/time-series-plot-1.png)<!-- -->
 
 Imputed data is clearly visible at the being of the time series and occurs again a week to October.
 Additionally at being of November and for many days in first two weeks of November and finally last day of November.
@@ -181,5 +181,5 @@ library(lattice)
 xyplot(Steps ~ interval | Day,pdata,type = "l", layout = c(1,2))
 ```
 
-![](PA1_template_files/figure-html/mean interval plots-1.png)<!-- -->
+![](PA1_template_files/figure-html/mean-interval-plots-1.png)<!-- -->
 
